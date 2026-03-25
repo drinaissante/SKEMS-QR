@@ -27,6 +27,6 @@ export async function POST(req) {
 
   return Response.json({
     uuid: data.id,
-    url: `${process.env.SUPABASE_URL}/equipments?id=${data.id}`,
+    url: `https://skems-qr.vercel.app/equipments?id=${data.id}`,
   });
 }
