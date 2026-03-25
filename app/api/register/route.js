@@ -27,6 +27,6 @@ export async function POST(req) {
 
   return Response.json({
     uuid: data.id,
-    url: `${process.env.VERCEL_URL}/equipments?id=${data.id}`,
+    url: `${process.env.UURL}/equipments?id=${data.id}`,
   });
 }

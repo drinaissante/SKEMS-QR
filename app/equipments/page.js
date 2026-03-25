@@ -5,12 +5,9 @@ export default async function Page({ searchParams }) {
     return <div>No ID provided</div>;
   }
 
-  const res = await fetch(
-    `${process.env.VERCEL_URL}/api/equipments?id=${id}`,
-    {
-      next: { revalidate: 30 },
-    },
-  );
+  const res = await fetch(`${process.env.UURL}/api/equipments?id=${id}`, {
+    next: { revalidate: 30 },
+  });
   const data = await res.json();
 
   if (data.error) {
