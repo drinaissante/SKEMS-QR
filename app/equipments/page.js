@@ -6,7 +6,7 @@ export default async function Page({ searchParams }) {
   }
 
   const res = await fetch(
-    `${process.env.SUPABASE_URL}/api/equipments?id=${id}`,
+    `${process.env.VERCEL_URL}/api/equipments?id=${id}`,
     {
       next: { revalidate: 30 },
     },
