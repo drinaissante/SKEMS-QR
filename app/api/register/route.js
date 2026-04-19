@@ -38,12 +38,12 @@ export async function POST(req) {
   const body = await req.json();
 
   // DB
-  // id, name, type, owner, date_given, status
-  const { name, type, owner, date_given, status } = body;
+  // id, name, type, owner, date_given, status, note
+  const { name, type, owner, date_given, status, note } = body;
 
   const { data, error } = await supabase
     .from("equipments")
-    .insert([{ name, type, owner, date_given, status }])
+    .insert([{ name, type, owner, date_given, status, note }])
     .select()
     .single();
 
