@@ -39,11 +39,11 @@ export async function POST(req) {
 
   // DB
   // id, name, type, owner, date_given, status, note
-  const { name, type, owner, date_given, status, note } = body;
+  const { name, type, owner, date_given, status, notes } = body;
 
   const { data, error } = await supabase
     .from("equipments")
-    .insert([{ name, type, owner, date_given, status, note }])
+    .insert([{ name, type, owner, date_given, status, notes }])
     .select()
     .single();
 
