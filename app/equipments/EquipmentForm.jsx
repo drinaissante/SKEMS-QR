@@ -64,7 +64,7 @@ export default function EquipmentForm({ data, id }) {
               <span className="text-right font-semibold text-blue-300">{data.owner}</span>
             </div>
             <div className="mt-3 p-3 bg-black/30 rounded border-l-4 border-blue-500 italic text-gray-400">
-              Admin Note: {data.note || "No additional notes provided."}
+              Admin Note: {data.notes || "No additional notes provided."}
             </div>
           </div>
         </div>
