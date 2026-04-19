@@ -82,7 +82,7 @@ export default function EquipmentForm({ data, id }) {
               <label className="text-white font-black text-xs sm:text-sm drop-shadow-md uppercase tracking-tight">
                 {label}
               </label>
-              <input required type="text" placeholder="..." className={inputClass} />
+              <input required type="text" placeholder="Enter information here" className={inputClass} />
             </div>
           ))}
         </div>
